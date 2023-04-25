@@ -1,0 +1,111 @@
+*,
+*:before,
+*:after,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font: Arial, serif;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(to top, #ff3cf5, #27a5ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.calculator {
+  transform: scale(0.8);
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(150px, auto) repeat(5, 100px);
+  background-color: black;
+  padding: 25px;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+.display {
+  color: white;
+  grid-column: 1 / 5;
+  display: flex;
+  padding: 25px;
+  justify-content: center;
+  flex-direction: column;
+  word-break: break-all;
+  font-size: 45px;
+  line-height: 40px;
+}
+.secondDisplay {
+  font-size: 35px;
+  color: #777;
+}
+.colTwo {
+  grid-column: span 2;
+}
+button {
+  font-weight: bold;
+  font-size: 30px;
+  outline: none;
+  border-radius: 50px;
+  border: none;
+  margin: 10px;
+  background-color: #444;
+  box-shadow: 0 6px 0 #222;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+button:hover {
+  background-color: #777;
+  box-shadow: 0 6px 0 #444;
+}
+button:active {
+  position: relative;
+  top: 6px;
+  box-shadow: 0 0 0;
+}
+.clear,
+.delete {
+  background-color: #777;
+  box-shadow: 0 6px 0 #555;
+  transition: background-color 0.1s;
+}
+.clear:hover,
+.delete:hover {
+  background-color: #999;
+  box-shadow: 0 6px 0 #888;
+}
+.clear:active,
+.delete:active {
+  box-shadow: 0 0 0;
+}
+.operator,
+.equals {
+  background-color: #d37130;
+  box-shadow: 0 6px 0 #7e4c2b;
+  transition: background-color 0.1s;
+}
+.operator:hover,
+.equals:hover {
+  background-color: #ff9f5e;
+  box-shadow: 0 6px 0 #ce8859;
+}
+.operator:active,
+.equals:active {
+  box-shadow: 0 0 0;
+}
+.active {
+  background-color: #fccaa9;
+  box-shadow: 0 6px 0 #a17b62;
+  color: black;
+}
+.dev {
+  color: white;
+  padding: 20px;
+}
+p {
+  color: white;
+}
